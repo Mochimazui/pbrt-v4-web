@@ -56,10 +56,15 @@
 <script>
 // @ is an alias to /src
 
+import { Renderer } from '../renderer/renderer.ts'
+
 export default {
   name: "Home",
   data: () => {
-    return { title: "" };
+    return { 
+      title: "",
+      renderer: null
+    };
   },
   created: () => {
     console.log("Renderer.vue Created");
@@ -88,6 +93,8 @@ export default {
 
     // this.initWebGL();
     // this.initRenderer();
+
+    this.renderer = Renderer();
   },
   methods: {
     initRenderer: () => {},
