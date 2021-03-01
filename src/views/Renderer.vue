@@ -56,7 +56,7 @@
 <script>
 // @ is an alias to /src
 
-import { Renderer } from '../renderer/renderer.ts'
+import { Renderer } from '../renderer/renderer'
 
 export default {
   name: "Home",
@@ -94,7 +94,9 @@ export default {
     // this.initWebGL();
     // this.initRenderer();
 
-    this.renderer = Renderer();
+    const renderer = new Renderer();
+    console.log(renderer);
+    renderer.render();
   },
   methods: {
     initRenderer: () => {},
